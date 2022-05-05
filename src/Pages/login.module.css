@@ -1,0 +1,98 @@
+.container {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  min-width: 100vw;
+  background: rgb(224, 218, 233);
+  background: linear-gradient(
+    162deg,
+    rgba(224, 218, 233, 1) 0%,
+    rgba(163, 136, 210, 1) 35%,
+    rgba(95, 40, 194, 1) 100%
+  );
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginForm {
+  background-color: white;
+  min-height: 500px;
+  width: 350px;
+  min-width: 350px;
+  max-height: 600px;
+}
+.formHeader {
+  display: flex;
+  flex-direction: row;
+  margin: 10%;
+  margin-bottom: 0;
+  font-size: large;
+  color: #737373;
+}
+.formHeader > img {
+  width: 15%;
+  height: 15%;
+}
+
+.inputControls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.inputControls > h1,
+h3 {
+  margin: 3%;
+}
+.inputControls > input {
+  margin: 5% 0;
+  min-width: 60%;
+  font-size: 1.2rem;
+  border: none;
+  border-bottom: #737373 1px solid;
+}
+.remember {
+  margin: 3%;
+  font-size: 1.2rem;
+}
+.remember > input {
+  accent-color: #5271ff;
+  height: 15px;
+  width: 15px;
+}
+
+.inputControls > button {
+  margin: 3%;
+  font-size: 1.5rem;
+  min-width: 50%;
+  background-color: #5f28c2;
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: 0.5s all;
+}
+.inputControls > button:hover {
+  background-color: #a388d2;
+  font-size: 1.7rem;
+}
+
+.copyright {
+  background-color: #200a42;
+  width: 100vw;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0px;
+  color: white;
+}
+.logos {
+  margin: 0 20px;
+  padding: 0;
+  cursor: pointer;
+}
