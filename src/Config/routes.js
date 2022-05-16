@@ -1,4 +1,5 @@
 import LoginPage from "../Pages/Login";
+import GeneralPage from "../Pages/General"
 
 
 const routes = [
@@ -7,6 +8,12 @@ const routes = [
     pagePath: "/login",
     component: LoginPage,
     isPrivate: false,
+  },
+  {
+    path: "/general",
+    pagePath: "/general",
+    component: GeneralPage,
+    isPrivate: true,
   }, 
   {
     path: "/*",
