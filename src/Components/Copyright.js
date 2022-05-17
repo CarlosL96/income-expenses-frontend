@@ -11,9 +11,10 @@ const Container = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   color: white;
+  
   .logos {
     margin: 0 20px;
     padding: 0;

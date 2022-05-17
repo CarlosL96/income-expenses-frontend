@@ -30,6 +30,7 @@ const Login = () => {
     };
     pageInitializer();
   }, []);
+  
   if (Boolean(userDetails.token)) {
     return <Navigate to="/general" />;
   }
