@@ -5,7 +5,6 @@ import styles from "./login.module.css";
 import pLogo from "../project-logo.png";
 import Copyright from "../Components/Copyright";
 import LoadingOverlay from "react-loading-overlay";
-import styled from "styled-components";
 
 const fetchingStatus = { ok: 0, loading: 1, error: 2 };
 const initialPageState = [{ status: 0, info: "" }];

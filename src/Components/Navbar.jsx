@@ -8,17 +8,23 @@ import PropTypes from "prop-types";
 const navbarRoutes = routes.filter((route) => route.isPrivate);
 
 const TopBar = styled.div`
-  background-color: #200a42;
-  width: 99vw;
-  height: 40px;
+  background-color: #e0dae9;
+  z-index: 999;
+  height: 50px;
   position: fixed;
   top: 0;
-  color: white;
-  margin: 5px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  .bar {
+    background-color: #200a42;
+    width: 99vw;
+    height: 40px;
+    color: white;
+    margin: 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .topbar-body {
     .bars {
       font-size: 20pt;
@@ -40,33 +46,41 @@ const TopBar = styled.div`
     position: fixed;
     right: 30px;
   }
+  @media screen and (min-width: 0px) and (max-width: 480px) {
+    .project-title {
+      display: none;
+    }
+  }
 `;
 
 const Top = (props) => {
   return (
     <TopBar>
-      <div className="topbar-body">
-        <FaBars className="bars" onClick={() => props.onCollapse()} />
-        <img src={pLogo} alt="" />
-        <span>Registro de Gastos e Ingresos</span>
-      </div>
-      <div className="user-info">
-        <span>Bienvenido, username</span>
+      <div className="bar">
+        <div className="topbar-body">
+          <FaBars className="bars" onClick={() => props.onCollapse()} />
+          <img src={pLogo} alt="" />
+          <span className="project-title">Registro de Gastos e Ingresos</span>
+        </div>
+        <div className="user-info">
+          <span>Bienvenido, username</span>
+        </div>
       </div>
     </TopBar>
   );
 };
 
 const SideBar = styled.div`
-  background-color: #200a42;
-  height: 87vh;
-  width: 160px;
   margin: 4% 5px 0;
-  border-radius: 10px;
   transition: 0.5s;
   float: left;
   nav {
+    background-color: #200a42;
+    border-radius: 10px;
+    transition: 0.5s;
+    height: 87vh;
     color: white;
+    position: fixed;
   }
   ul {
     margin: 0;
@@ -139,7 +153,7 @@ const SideBar = styled.div`
 
   /*Mobile Landscape*/
   @media screen and (min-width: 0px) and (max-width: 920px) and (max-height: 450px) {
-    min-height: 100%;   
+    min-height: 100%;
     margin-top: 35px;
     ul {
       margin-top: 50px;
@@ -160,7 +174,7 @@ const Side = (props) => {
           {navbarRoutes.map((route, index) => {
             const Icon = route.icon;
             return (
-              <li className={activeUrl == route.path ? "li-active" : ""}>
+              <li key={index} className={activeUrl == route.path ? "li-active" : ""}>
                 <a href={route.path}>
                   <Icon />
                   <span style={{ display: uncollapse ? "none" : "inline" }}>

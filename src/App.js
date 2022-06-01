@@ -1,5 +1,6 @@
 import { Provider } from "./Context";
 import "normalize.css";
+import 'react-datepicker/dist/react-datepicker.css'
 import "./index.css";
 import MainComponent from "./Components/MainComponent"
 
